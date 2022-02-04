@@ -1,0 +1,72 @@
+<div class="card-box">
+    <form [formGroup]="employeeform" (ngSubmit)="SaveEmployee()">
+        <div class="row" style="text-align: center;display: block;">
+            <h2>Add/Edit Employee</h2>
+        </div>
+
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <div class="form-group">
+                    <label for="txtcode">Code</label>
+                    <input type="text" id="txtcode" class="form-control" formControlName="code" autocomplete="off" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" formControlName="name" autocomplete="off" />
+                    <span *ngIf="name && name.invalid && name.touched" class="error">Please enter name</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" formControlName="email" autocomplete="off" />
+                    <span *ngIf="email && email.invalid && email.touched" class="error">Please enter valid email</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" class="form-control" formControlName="phone" autocomplete="off" />
+                    <span *ngIf="phone && phone.invalid && phone.touched" class="error">Please enter phone</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <div class="form-group">
+                    <label>Designation</label>
+                    <select class="form-control" formControlName="designation">
+                        <option value="">Select</option>
+                        <option *ngFor="let item of desigantiondata" value="{{item.code}}">
+                            {{item.name}}
+                        </option>
+                    </select>
+                    <span *ngIf="designation && designation.invalid && designation.touched" class="error">Please enter designation</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="offset-lg-3 col-lg-2">
+                <br>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <br>
+                <span class={{messageclass}}>{{message}}</span>
+            </div>
+        </div>
+
+    </form>
+</div>
