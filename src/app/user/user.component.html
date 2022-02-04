@@ -1,0 +1,50 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of emplist$">
+<td>{{item.code}}</td>
+<td>{{item.name}}</td>
+        </tr>
+    </tbody>
+</table>
+<p>{{empdata$ | json}}</p>
+
+<div class="card-box">
+    <form [formGroup]="designationform" (ngSubmit)="SaveDes()">
+        <div class="row" style="text-align: center;display: block;">
+            <h2>Add/Edit Designation</h2>
+        </div>
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <div class="form-group">
+                    <label>Code</label>
+                    <input type="text" class="form-control" formControlName="code" autocomplete="off" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" formControlName="name" autocomplete="off" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="offset-lg-3 col-lg-2">
+                <br>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                </div>
+            </div>
+          
+        </div>
+
+    </form>
+</div>

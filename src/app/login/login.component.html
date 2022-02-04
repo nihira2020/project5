@@ -1,0 +1,48 @@
+<div class="container-fluid" style="margin-top: 10%;">
+    <div class="row">
+      <div class="offset-lg-3 col-lg-6">
+     
+  <div class="card-box" style="background-color: #ccc;">
+      <form [formGroup]="loginform" (ngSubmit)="Proceedlogin()">
+  
+     
+      <div class="row" style="display: block;">
+        <h2 style="text-align: center;" >Login</h2>
+      </div>
+      
+    <div class="row">
+      <div class="offset-lg-3 col-lg-6">
+          <div class="form-group">
+              <label for="txtname">User Name</label>
+              <input type="text" id="txtname" class="form-control" formControlName="username" placeholder="Enter the User Name"   autocomplete="off"  />
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-lg-3 col-lg-6">
+          <div class="form-group">
+              <label for="txtpassword">password</label>
+              <input type="text" id="txtpassword" class="form-control" formControlName="password"  placeholder="Enter the password"  autocomplete="off"  />
+          </div>
+      </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="offset-lg-3 col-lg-2">
+        <br>
+          <div class="form-group" style="text-align: center;">
+             <button type="submit" class="btn btn-primary btn-lg btn-block" >Login</button>
+          </div>
+      </div>
+      <div class="col-lg-3">
+          <br>
+          <span></span>
+      </div>
+    </div>
+  </form>
+    
+    </div>
+  </div>
+  </div>
+  </div>

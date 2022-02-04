@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+.card-box {
+    padding: 10px;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
+
+.btn-block {
+    /* display: block;
+    width: 100%; */
+}
+.header{
+    width: 100%;
+    background-color: lightblue;
+    height: 40px;
+}
+
+.menulink{
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+.error{
+    color: red;
+}
+.sucess{
+    color: green;
+}
