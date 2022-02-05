@@ -18,9 +18,9 @@ export class TokenInterceptorService implements HttpInterceptor {
       catchError(errordata => {
         if (errordata.status === 401) {
           // need to implement logout
-          //authservice.Logout();
+          authservice.Logout();
           // refresh token logic
-          return this.handleRefrehToken(request, next);
+        //  return this.handleRefrehToken(request, next);
         }
         return throwError(errordata);
       })
