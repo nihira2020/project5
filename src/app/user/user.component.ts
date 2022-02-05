@@ -22,7 +22,6 @@ export class UserComponent implements OnInit {
       this.emplist$ = result;
     });
     
-    console.log(this.emplist$);
 
     this.service.GetByCode('tester').toPromise().then(response => {
       this.empdata$ = response;

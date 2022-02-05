@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
         if (this.responsedata != null) {
           localStorage.setItem('token', this.responsedata.jwtToken);
           localStorage.setItem('refreshtoken', this.responsedata.refreshToken);
-          
+          this.service.updatemenu.next();
           this.route.navigate(['']);
         } else {
           alert("login Failed");

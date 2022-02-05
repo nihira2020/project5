@@ -13,7 +13,8 @@ import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import {ReactiveFormsModule} from '@angular/forms'
 import { TokenInterceptorService } from './service/token-interceptor.service';
 import {EmployeeService} from './service/employee.service';
-import { UserComponent } from './user/user.component'
+import { UserComponent } from './user/user.component';
+import { AboutComponent } from './about/about.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UserComponent } from './user/user.component'
     EmployeeComponent,
     EmplistingComponent,
     EmpaddComponent,
-    UserComponent
+    UserComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
